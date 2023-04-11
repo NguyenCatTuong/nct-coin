@@ -6,10 +6,12 @@
 }
 
 .wallet-header {
-    font-size: calc(10px + 2vmin);
+    font-size: calc(10px + 2vmin) !important;
     background-color: #8bb2ff;
     width: 100%;
+    min-height: 36px;
     display: flex;
+    align-items: center;
     padding-left: 20px;
 }
 
@@ -30,5 +32,12 @@
 }
 
 .detail {
-    font-size: 180px;
+    font-size: 18px;
+}
+
+.create-wallet-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
