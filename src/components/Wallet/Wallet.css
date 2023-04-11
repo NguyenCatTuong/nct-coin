@@ -1,4 +1,5 @@
 .wallet-wrap {
+    min-height: 140px;
     background-color: #ccc;
     display: flex;
     flex-direction: column;

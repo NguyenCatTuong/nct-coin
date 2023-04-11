@@ -1,9 +1,24 @@
 import './App.css';
-// import { Box, Typography } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2'; // Grid version 2
 import Wallet from './components/Wallet/Wallet';
+import WalletList from './components/WalletList/WalletList';
+import { useState } from 'react';
+import Transaction from './components/Transaction/Transaction';
+import { Divider } from '@mui/material';
 
 function App() {
+  // ENVIRONMENT
+  const [wallets, setWallets] = useState([
+    { id: 0, name: 'Cát Tường', coin: 10, transfer: 0, received: 10 }
+  ])
+
+  const [currentWallet, setCurrentWallet] = useState(0);
+
+  function getIdWallet(value) {
+    setCurrentWallet(value.newId);
+  }
+
+
   return (
     <div className="App">
       <header className="App-header">
@@ -12,10 +27,21 @@ function App() {
 
       <Grid container spacing={2}>
         <Grid xs={6}>
-          <Wallet/>
+          <Wallet />
         </Grid>
         <Grid xs={6}>
-          b
+          <WalletList
+            wallets={wallets}
+            currentWallet={currentWallet}
+            getIdWallet={getIdWallet}
+          />
+
+          <Divider sx={{ mb: 2 }} />
+          
+          <Transaction
+            wallets={wallets}
+            currentWallet={currentWallet}
+          />
         </Grid>
       </Grid>
 

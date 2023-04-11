@@ -1,5 +1,5 @@
 import './Wallet.css'
-import { Box, Button, Card, CardActionArea, CardActions, CardContent, Divider, Typography } from '@mui/material';
+import { Box, Card, CardActionArea, CardActions, CardContent, Divider, Typography } from '@mui/material';
 import { useState } from 'react';
 
 function Wallet() {
@@ -25,10 +25,11 @@ function Wallet() {
 
     return (
         <Box>
-            <Card sx={{ borderRadius: 0, bgcolor: '#ccc'}}>
+            {/* Create a new wallet */}
+            <Card sx={{ borderRadius: 0, bgcolor: '#ccc', minHeight: '100px'}}>
                 <CardActionArea >
-                    <CardContent sx={{w: '100%', padding: 0}}>
-                        <Typography sx={{d: 'flex', justifyContent:'flex-start', w: '100%', bgcolor: '#8bb2ff' }} gutterBottom variant="h5" component="div">
+                    <CardContent sx={{ w: '100%', padding: 0 }}>
+                        <Typography sx={{ d: 'flex', justifyContent: 'flex-start', w: '100%', bgcolor: '#8bb2ff' }} gutterBottom variant="h5" component="div">
                             Create a new wallet
                         </Typography>
                     </CardContent>
@@ -50,7 +51,7 @@ function Wallet() {
                 </CardActions>
             </Card>
 
-            <Divider sx={{mb: 2}} />
+            <Divider sx={{ mb: 2 }} />
 
             <Box className='wallet-wrap'>
                 <Typography className="wallet-header">My wallet</Typography>
