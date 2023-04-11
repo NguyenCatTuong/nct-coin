@@ -7,6 +7,7 @@ function Transaction(props) {
     const {
         wallets,
         currentWallet,
+        sendCoin
     } = props;
 
     const [sendCoinForm, setSendCoinForm] = useState(0);
@@ -14,6 +15,8 @@ function Transaction(props) {
 
     function handleChangeSendCoin(e) {
         setSendCoinForm(e.target.value);
+        // Remove invalid class
+        document.getElementsByClassName('invalid')[0]?.classList.remove('invalid');
     }
 
     function handleChangeIdReceiver(e) {
@@ -27,7 +30,7 @@ function Transaction(props) {
             id: Math.floor(idReceiver),
             coin: Math.floor(sendCoinForm),
         };
-        // sendCoin(formValue);
+        sendCoin(formValue);
         setSendCoinForm(0);
         SetIdReceiver(0);
     }
@@ -46,8 +49,7 @@ function Transaction(props) {
                     Add more wallet to transfer
                 </p>
                 <form
-                    // className={wallets.length === 1 ? "disappear" : "send-coin"}
-                    className="disappear"
+                    className={wallets.length === 1 ? "disappear" : "send-coin"}
                     onSubmit={handleTransferSubmit}
                     id="transferId"
                 >
@@ -80,7 +82,7 @@ function Transaction(props) {
                     </div>
                     <button className="btn btn-block btn-success">Send</button>
                 </form>
-                <label className="invalid">Input invalid</label>
+                <label className="valid">Input invalid</label>
             </CardActions>
         </Card>
     )

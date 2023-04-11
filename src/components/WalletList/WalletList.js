@@ -1,4 +1,5 @@
 import { Card, CardActionArea, CardActions, CardContent, Typography } from "@mui/material";
+import './WalletList.css'
 
 function WalletList(props) {
 
@@ -32,8 +33,8 @@ function WalletList(props) {
                         key={wallet.id}
                         className={
                             currentWallet === wallet.id
-                                ? "wallet-item active mb-2"
-                                : "wallet-item mb-2"
+                                ? "item-wallet active mb-2"
+                                : "item-wallet mb-2"
                         }
                         onClick={() => handleClickChangeWallet(wallet.id)}
                     >
