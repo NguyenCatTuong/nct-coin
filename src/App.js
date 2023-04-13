@@ -4,7 +4,9 @@ import Wallet from './components/Wallet/Wallet';
 import WalletList from './components/WalletList/WalletList';
 import { useState } from 'react';
 import Transaction from './components/Transaction/Transaction';
-import { Divider } from '@mui/material';
+import { Divider, Typography } from '@mui/material';
+import Block from './components/Block/Block';
+import { Box } from '@mui/system';
 const SHA256 = require("crypto-js/sha256");
 
 
@@ -136,6 +138,16 @@ function App() {
             currentWallet={currentWallet}
             sendCoin={sendCoin}
           />
+        </Grid>
+      </Grid>
+
+      <Grid container spacing={2} className='blockChain'>
+        <Grid xs={10} sx={{w: '100%', bgcolor: '#ccc', p: 0}}>
+          <Box className='bc-header'>
+            <Typography variant='h5' className='txt-bc-header'>Block Chain</Typography>
+          </Box>
+          <Block />
+          <Block />
         </Grid>
       </Grid>
 

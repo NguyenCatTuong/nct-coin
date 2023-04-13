@@ -45,8 +45,8 @@ function Transaction(props) {
                 </CardContent>
             </CardActionArea>
             <CardActions className="transaction-action">
-                <p className={wallets.length === 1 ? "txtNotify" : "disappear"}>
-                    Add more wallet to transfer
+                <p className={wallets.length === 1 ? "transNotify" : "disappear"}>
+                    You need at least two wallets to process the transaction
                 </p>
                 <form
                     className={wallets.length === 1 ? "disappear" : "send-coin"}

@@ -53,3 +53,7 @@
 .item-wallet:hover{
 	background-color: #8bb2ff;
 }
+
+.transNotify {
+    color: red;
+}
