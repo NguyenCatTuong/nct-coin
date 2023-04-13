@@ -3,7 +3,8 @@ import { COLORS } from "../../constants/colors";
 import './Block.css'
 import { Icon } from '@iconify/react';
 
-function Block() {
+function Block(props) {
+    const { data, hash, prevHash, name } = props;
 
     return (
         <>
@@ -12,7 +13,7 @@ function Block() {
                 <CardActionArea>
                     <CardContent className="card-content">
                         <Typography variant="h6">
-                            Block Name
+                            {name}
                         </Typography>
                     </CardContent>
                 </CardActionArea>
@@ -20,19 +21,19 @@ function Block() {
                     <List className="list-block">
                         <ListItem
                             className="list-item"
-                            secondaryAction={<ListItemText primary={'data'} />}
+                            secondaryAction={<ListItemText primary={data} />}
                         >
                             <ListItemText primary={'Message'} />
                         </ListItem>
                         <ListItem
                             className="list-item"
-                            secondaryAction={<ListItemText primary={'hash'} />}
+                            secondaryAction={<ListItemText primary={hash} />}
                         >
                             <ListItemText primary={'Hash'} />
                         </ListItem>
                         <ListItem
                             className="list-item"
-                            secondaryAction={<ListItemText primary={'pre'} />}
+                            secondaryAction={<ListItemText primary={prevHash} />}
                         >
                             <ListItemText primary={'Previous hash'} />
                         </ListItem>

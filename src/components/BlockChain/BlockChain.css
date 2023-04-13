@@ -1,0 +1,11 @@
+.bc-header {
+    width: 100%;
+    background-color: #8bb2ff;
+    padding: 5px 0;
+    display: flex;
+}
+
+.txt-bc-header {
+    padding-left: 20px;
+    font-weight: 500;
+}
