@@ -4,10 +4,9 @@ import Wallet from './components/Wallet/Wallet';
 import WalletList from './components/WalletList/WalletList';
 import { useState } from 'react';
 import Transaction from './components/Transaction/Transaction';
-import { Divider, Typography } from '@mui/material';
-import Block from './components/Block/Block';
-import { Box } from '@mui/system';
+import { Divider } from '@mui/material';
 import BlockChain from './components/BlockChain/BlockChain';
+import History from './components/History/History';
 const SHA256 = require("crypto-js/sha256");
 
 
@@ -25,6 +24,7 @@ function App() {
   ]);
 
   const [currentWallet, setCurrentWallet] = useState(0);
+  const [history, setHistory] = useState([]); 
 
   const calculateHash = (index, previousHash, difficulty) => {
     let nonce = 0;
@@ -103,11 +103,26 @@ function App() {
       newWallet[value.id].received += value.coin;
 
       const idMiner = findMiner(currentWallet, value.id, newWallet.length);
+      let minerName = "Sending and receiving accounts cannot be a miner";
       if (idMiner !== -1) {
+        minerName = newWallet[idMiner].name;   
         newWallet[idMiner].coin += miningReward;
         newWallet[idMiner].received += miningReward;
       }
+
+      // For history
+      const newHistory = {
+        id: Date.now(),
+        to: newWallet[value.id].name,
+        from: newWallet[currentWallet].name,
+        coin: value.coin,
+        miner: minerName
+      }
       setWallets(newWallet);
+      let newListHistory = [...history];
+      newListHistory.push(newHistory);
+      setHistory(newListHistory);
+      clearDataInput('transferId');   
     }
   }
 
@@ -147,6 +162,15 @@ function App() {
           <BlockChain 
             blocks={block}
           />
+        </Grid>
+      </Grid>
+
+
+      <Grid container spacing={2} className='blockChain'>
+        <Grid xs={10} sx={{ w: '100%', bgcolor: '#ccc', p: 0 }}>
+         <History
+          history = {history}
+         />
         </Grid>
       </Grid>
 

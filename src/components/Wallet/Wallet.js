@@ -10,6 +10,10 @@ function Wallet(props) {
 
     const [walletName, setWalletName] = useState("");
 
+    function clearDataInput(id) {
+        document.getElementById(id).reset();
+    }
+
     function handelCreateWalletChange(e) {
         // console.log(e.target.value);
         setWalletName(e.target.value);
@@ -26,6 +30,7 @@ function Wallet(props) {
         };
         setWalletName("");
         formCreate(formValue);
+        clearDataInput('new-wallet-id')
     }
 
     return (
@@ -40,7 +45,9 @@ function Wallet(props) {
                     </CardContent>
                 </CardActionArea>
                 <CardActions>
-                    <form className='create-wallet-content' onSubmit={handelCreateWalletSubmit}>
+                    <form
+                        id='new-wallet-id'
+                        className='create-wallet-content' onSubmit={handelCreateWalletSubmit}>
                         <Box sx={{ flex: 1, mr: 2 }}>
                             <input
                                 style={{ width: '100%' }}
