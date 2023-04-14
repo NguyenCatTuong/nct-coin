@@ -1,3 +1,23 @@
 .active{
-	background-color: #61a1fc;
+	background-color: #E38B29 !important;
+}
+
+.item-wallet{
+	border: solid 1px #E38B29; 
+	padding: 4px;
+	border-radius: 2px;
+	cursor: pointer;
+	transition: linear 0.5s;
+    background-color: #FFFFFF;
+}
+
+.item-wallet span {
+	font-size: 13px;
+	font-weight: 500;
+	color: #000000;
+	margin-left: 5px;
+}
+
+.item-wallet:hover{
+	background-color: #F1A661;
 }

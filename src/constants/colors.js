@@ -1,3 +1,5 @@
 export const COLORS = {
-    HEADER: '#8bb2ff',  
+    HEADER: '#F1A661',
+    HEADER_COLOR: '#F1A661',
+    BODY_COLOR: '#FDEEDC'
 }

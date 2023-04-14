@@ -19,10 +19,10 @@ function WalletList(props) {
 
 
     return (
-        <Card sx={{ borderRadius: 0, bgcolor: '#ccc', minHeight: '100px' }}>
+        <Card sx={{ borderRadius: 0, bgcolor: '#FDEEDC', minHeight: '100px' }}>
             <CardActionArea>
                 <CardContent sx={{ w: '100%', padding: 0 }}>
-                    <Typography sx={{ d: 'flex', justifyContent: 'flex-start', w: '100%', bgcolor: '#8bb2ff' }} gutterBottom variant="h5" component="div">
+                    <Typography sx={{ d: 'flex', justifyContent: 'flex-start', w: '100%', bgcolor: '#F1A661' }} gutterBottom variant="h5" component="div">
                         List of Wallet in System
                     </Typography>
                 </CardContent>

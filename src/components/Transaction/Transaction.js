@@ -36,20 +36,20 @@ function Transaction(props) {
     }
 
     return (
-        <Card sx={{ borderRadius: 0, bgcolor: '#ccc', minHeight: '140px' }}>
+        <Card sx={{ borderRadius: 0, bgcolor: '#FDEEDC', minHeight: '140px' }}>
             <CardActionArea>
                 <CardContent sx={{ w: '100%', padding: 0 }}>
-                    <Typography sx={{ d: 'flex', justifyContent: 'flex-start', w: '100%', bgcolor: '#8bb2ff' }} gutterBottom variant="h5" component="div">
+                    <Typography sx={{ d: 'flex', justifyContent: 'flex-start', w: '100%', bgcolor: '#F1A661' }} gutterBottom variant="h5" component="div">
                         Send coin
                     </Typography>
                 </CardContent>
             </CardActionArea>
             <CardActions className="transaction-action">
-                <p className={wallets.length === 1 ? "transNotify" : "disappear"}>
-                    You need at least two wallets to process the transaction
+                <p className={wallets.length <= 2 ? "transNotify" : "disappear"}>
+                    You need at least two wallets to process the transaction and 3 wallets to find a miner
                 </p>
                 <form
-                    className={wallets.length === 1 ? "disappear" : "send-coin"}
+                    className={wallets.length <= 2 ? "disappear" : "send-coin"}
                     onSubmit={handleTransferSubmit}
                     id="transferId"
                 >

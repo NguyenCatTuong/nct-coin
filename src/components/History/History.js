@@ -1,11 +1,11 @@
 import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography, styled, tableCellClasses } from "@mui/material";
 import moment from 'moment';
 import './History.css'
-import { red } from "@mui/material/colors";
+import { STATIC } from "../../constants/static";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
-        backgroundColor: '#ccc',
+        backgroundColor: '#FDEEDC',
         color: theme.palette.common.black,
         fontWeight: theme.palette.common.bold,
     },
@@ -34,8 +34,8 @@ function showHistory(history) {
                     {'System'}
                 </StyledTableCell>
                 <StyledTableCell align="right">{history[i].miner}</StyledTableCell>
-                <StyledTableCell align="right">{1}</StyledTableCell>
-                <StyledTableCell align="right">{'Award for miner'}</StyledTableCell>
+                <StyledTableCell align="right">{STATIC.AWARD_COIN}</StyledTableCell>
+                <StyledTableCell align="right">Award for miner</StyledTableCell>
                 <StyledTableCell align="right">{moment(history[i].id).format('LLLL')}</StyledTableCell>
             </StyledTableRow>
         );
@@ -46,7 +46,7 @@ function showHistory(history) {
                 </StyledTableCell>
                 <StyledTableCell align="right">{history[i].to}</StyledTableCell>
                 <StyledTableCell align="right">{history[i].coin}</StyledTableCell>
-                <StyledTableCell align="right">{history[i].miner}</StyledTableCell>
+                <StyledTableCell align="right">Transfer</StyledTableCell>
                 <StyledTableCell align="right">{moment(history[i].id).format('LLLL')}</StyledTableCell>
             </StyledTableRow>
         );
@@ -67,7 +67,7 @@ function History(props) {
                             <StyledTableCell>From</StyledTableCell>
                             <StyledTableCell align="right">To</StyledTableCell>
                             <StyledTableCell align="right">Amount</StyledTableCell>
-                            <StyledTableCell align="right">Miner</StyledTableCell>
+                            <StyledTableCell align="right">Type</StyledTableCell>
                             <StyledTableCell align="right">Time</StyledTableCell>
                         </TableRow>
                     </TableHead>

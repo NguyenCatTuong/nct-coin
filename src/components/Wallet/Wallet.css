@@ -1,6 +1,6 @@
 .wallet-wrap {
-    min-height: 140px;
-    background-color: #ccc;
+    min-height: 260px;
+    background-color: #FDEEDC;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -8,7 +8,7 @@
 
 .wallet-header {
     font-size: calc(10px + 2vmin) !important;
-    background-color: #8bb2ff;
+    background-color: #F1A661;
     width: 100%;
     min-height: 36px;
     display: flex;
