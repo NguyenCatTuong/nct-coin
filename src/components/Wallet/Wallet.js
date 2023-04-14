@@ -11,12 +11,16 @@ function Wallet(props) {
             <Typography className="wallet-header">My wallet</Typography>
             <Box className="wallet-content">
                 <Box className='wallet-item'>
-                    <Typography className='detail' >Wallet name: </Typography>
-                    <Typography className='detail'>{myWallet.name}</Typography>
+                    <Typography sx={{ whiteSpace: 'nowrap' }} className='detail' >Wallet name: </Typography>
+                    <Typography sx={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }} className='detail'>{myWallet.name}</Typography>
                 </Box>
                 <Box className='wallet-item'>
                     <Typography className='detail'>Balance: </Typography>
-                    <Typography className='detail'>{myWallet.coin}</Typography>
+                    <Typography className='detail'>{myWallet.coin} Coin</Typography>
+                </Box>
+                <Box className='wallet-item'>
+                    <Typography sx={{ whiteSpace: 'nowrap' }} className='detail'>Public key: </Typography>
+                    <Typography sx={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }} className='detail'>{myWallet.public_key}</Typography>
                 </Box>
             </Box>
         </Box>

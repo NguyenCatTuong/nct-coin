@@ -76,3 +76,13 @@
   justify-content: center;
   padding: 0 !important;
 }
+
+.history-header {
+  font-size: calc(10px + 2vmin) !important;
+  background-color: #F1A661;
+  width: 100%;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  padding: 5px 0 5px 20px;
+}

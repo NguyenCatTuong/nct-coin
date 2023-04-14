@@ -19,15 +19,15 @@ function WalletList(props) {
 
 
     return (
-        <Card sx={{ borderRadius: 0, bgcolor: '#FDEEDC', minHeight: '100px' }}>
-            <CardActionArea>
-                <CardContent sx={{ w: '100%', padding: 0 }}>
-                    <Typography sx={{ d: 'flex', justifyContent: 'flex-start', w: '100%', bgcolor: '#F1A661' }} gutterBottom variant="h5" component="div">
+        <Card sx={{ borderRadius: 0, bgcolor: '#FDEEDC', height: '100px' }}>
+            <CardActionArea sx={{ mb: 0}}>
+                <CardContent sx={{ w: '100%', padding: '5px', bgcolor: '#F1A661', display: 'flex', justifyContent: 'flex-start' }}>
+                    <Typography gutterBottom variant="h5" sx={{ mb: 0, pl: '5px' }}>
                         List of Wallet in System
                     </Typography>
                 </CardContent>
             </CardActionArea>
-            <CardActions>
+            <CardActions sx={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                 {wallets.map((wallet) => (
                     <div
                         key={wallet.id}

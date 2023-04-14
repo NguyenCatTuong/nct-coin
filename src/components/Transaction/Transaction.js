@@ -38,8 +38,8 @@ function Transaction(props) {
     return (
         <Card sx={{ borderRadius: 0, bgcolor: '#FDEEDC', minHeight: '140px' }}>
             <CardActionArea>
-                <CardContent sx={{ w: '100%', padding: 0 }}>
-                    <Typography sx={{ d: 'flex', justifyContent: 'flex-start', w: '100%', bgcolor: '#F1A661' }} gutterBottom variant="h5" component="div">
+                <CardContent sx={{ w: '100%', padding: '5px', bgcolor: '#F1A661', display: 'flex', justifyContent: 'flex-start' }}>
+                    <Typography sx={{ mb: 0, pl: '5px' }} gutterBottom variant="h5" component="div">
                         Send coin
                     </Typography>
                 </CardContent>

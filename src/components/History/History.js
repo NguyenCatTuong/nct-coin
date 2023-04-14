@@ -1,6 +1,5 @@
-import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography, styled, tableCellClasses } from "@mui/material";
+import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, styled, tableCellClasses } from "@mui/material";
 import moment from 'moment';
-import './History.css'
 import { STATIC } from "../../constants/static";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -59,7 +58,6 @@ function History(props) {
 
     return (
         <>
-            <Typography variant="h5" component='div' className="history-header">History</Typography>
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 700 }} aria-label="customized table">
                     <TableHead>
