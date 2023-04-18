@@ -1,14 +1,14 @@
 # nct-coin project blockchain cá nhân (Các công nghệ mới trong phát triển phầm mềm 19_3)
 
-Họ và tên: Nguyễn Cát Tường
-MSSV: 18120644
+Họ và tên: Nguyễn Cát Tường.\
+MSSV: 18120644.\
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## How to run this project
 
 In the project directory, you can run:
 
-### `1. npm install' - for the first time, helping you to install the packages.
+### `1. npm install` - for the first time, helping you to install the packages.
 ### `2. npm start` - From the second time, if do not install any package. Just only using this script to run the project.
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
