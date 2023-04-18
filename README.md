@@ -1,8 +1,8 @@
-# Project blockchain cá nhân nct-coin\
-Các công nghệ mới trong phát triển phầm mềm 19_3
+# Project blockchain cá nhân nct-coin
 
 Họ và tên: Nguyễn Cát Tường.\
 MSSV: 18120644.\
+Môn: Các công nghệ mới trong phát triển phầm mềm 19_3.\
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## How to run this project
