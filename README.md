@@ -1,4 +1,5 @@
-# nct-coin project blockchain cá nhân (Các công nghệ mới trong phát triển phầm mềm 19_3)
+# Project blockchain cá nhân nct-coin\
+Các công nghệ mới trong phát triển phầm mềm 19_3
 
 Họ và tên: Nguyễn Cát Tường.\
 MSSV: 18120644.\
@@ -20,3 +21,4 @@ You may also see any lint errors in the console.
 1. Slide và bài giảng trong các buổi học
 2. https://github.com/Savjee/SavjeeCoin
 3. https://savjee.github.io/savjeecoin-frontend/
+4. https://www.youtube.com/watch?v=zVqczFZr124&list=PLzvRQMJ9HDiTqZmbtFisdXFxul5k0F-Q4
